@@ -58,7 +58,8 @@
                 <thead>
                     <tr>
                         <th>Dia</th>
-                        <th>Entrada</th>
+                        <th>Saída Casa</th>
+                        <th>Chegada Mato</th>
                         <th>Saída Café</th>
                         <th>Volta Café</th>
                         <th>Interjornada</th>
@@ -67,7 +68,7 @@
                         <th>Volta Almoço</th>
                         <th>Interjornada</th>
                         <th>Volta Interjornada</th>
-                        <th>Saída</th>
+                        <th>Saída Mato</th>
                         <th>Chegada Casa</th>
                         <th>Horas Trabalhadas</th>
                     </tr>
@@ -81,6 +82,7 @@
         <div class="actions">
             <button class="btn btn-primary" id="calculate-btn">Calcular Horas</button>
             <button class="btn btn-secondary" id="save-btn">Salvar Dados</button>
+            <button class="btn btn-pdf" id="pdf-btn">Exportar PDF</button>
             <button class="btn btn-reset" id="reset-btn">Limpar Tudo</button>
         </div>
 
@@ -89,6 +91,9 @@
         </footer>
     </div>
 
+    <!-- Incluir as bibliotecas para gerar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
