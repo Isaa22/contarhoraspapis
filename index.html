@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Controle de Horas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Planilha de Controle de Horas</h1>
+            <p class="subtitle">Registre seus horários de trabalho e acompanhe suas horas mensais</p>
+        </header>
+
+        <div class="month-selector">
+            <select id="month-select">
+                <option value="0">Janeiro</option>
+                <option value="1">Fevereiro</option>
+                <option value="2">Março</option>
+                <option value="3">Abril</option>
+                <option value="4">Maio</option>
+                <option value="5">Junho</option>
+                <option value="6">Julho</option>
+                <option value="7">Agosto</option>
+                <option value="8">Setembro</option>
+                <option value="9">Outubro</option>
+                <option value="10">Novembro</option>
+                <option value="11">Dezembro</option>
+            </select>
+            <select id="year-select">
+                <!-- Os anos serão preenchidos via JavaScript -->
+            </select>
+            <button id="change-month">Alterar Mês</button>
+        </div>
+
+        <div class="dashboard">
+            <div class="card total-hours">
+                <h3>Total de Horas Trabalhadas</h3>
+                <div class="value" id="total-hours">00:00</div>
+            </div>
+            <div class="card break-hours">
+                <h3>Horas de Descanso</h3>
+                <div class="value" id="break-hours">00:00</div>
+            </div>
+            <div class="card interjornada">
+                <h3>Interjornada</h3>
+                <div class="value" id="interjornada-hours">00:00</div>
+            </div>
+            <div class="card">
+                <h3>Dias Trabalhados</h3>
+                <div class="value" id="worked-days">0</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="timesheet">
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Entrada</th>
+                        <th>Saída Café</th>
+                        <th>Volta Café</th>
+                        <th>Interjornada</th>
+                        <th>Volta Interjornada</th>
+                        <th>Saída Almoço</th>
+                        <th>Volta Almoço</th>
+                        <th>Interjornada</th>
+                        <th>Volta Interjornada</th>
+                        <th>Saída</th>
+                        <th>Chegada Casa</th>
+                        <th>Horas Trabalhadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- As linhas serão preenchidas via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-primary" id="calculate-btn">Calcular Horas</button>
+            <button class="btn btn-secondary" id="save-btn">Salvar Dados</button>
+            <button class="btn btn-reset" id="reset-btn">Limpar Tudo</button>
+        </div>
+
+        <footer>
+            <p>Planilha de Controle de Horas &copy; 2023 - Desenvolvido para controle de jornada de trabalho</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
