@@ -338,7 +338,15 @@ document.addEventListener('DOMContentLoaded', function() {
             'Chegada Casa',
             'Horas Trab.'
         ];
+
+         // Data de geração do PDF
+        const today = new Date();
+        const genDate = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()} ${today.getHours()}:${today.getMinutes()}`;
+        doc.text(`Gerado em: ${genDate}`, 15, finalY + 25);
         
+        // Salvar o PDF
+        doc.save(`planilha_horas_${monthName}_${currentYear}.pdf`);
+    }
         // Configurações da tabela
         const tableConfig = {
             head: [headers],
